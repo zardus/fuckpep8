@@ -12,4 +12,8 @@ First, install detectindent and configure some reasonable defaults.
 
 Then, install fuckpep8.
 
+Then, make sure you have filetype plugins enabled in VIM:
+
+	filetype plugin on
+
 That's it!
