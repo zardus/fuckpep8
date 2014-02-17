@@ -4,6 +4,8 @@ This plugin is intended to make life feasible for those of us who are right in t
 
 Pull requests to undo other annoying pep8 insanity are welcome :-)
 
+Special thanks to Luca Invernizzi for the initial prototype of this concept!
+
 ## Usage
 
 First, install detectindent and configure some reasonable defaults.
