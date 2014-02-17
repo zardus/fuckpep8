@@ -1,5 +1,5 @@
 " Name:          fuckpep8 (global plugin)
-" Version:       1.0
+" Version:       1.1
 " Author:        Yan Shoshitaishvili <yans@yancomm.net>
 " Updates:       http://github.com/zardus/fuckpep8
 " Purpose:       Make life feasible in the presense of crazy space-hippies.
@@ -9,10 +9,7 @@
 " License:       You may redistribute this plugin under the same terms as Vim
 "                itself.
 "
-" Usage:         Put the following in your .vimrc:
-"
-"                    autocmd BufReadPost *.py call FixIndent()
-"                    autocmd BufWritePre *.py call UnfixIndent()
+" Usage:         None! It works as a filetype plugin.
 "
 " Requirements:  Needs the awesome detectindex plugin
 "                   (http://www.vim.org/scripts/script.php?script_id=1171)
