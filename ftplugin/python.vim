@@ -44,3 +44,7 @@ function! UnfixIndent()
 		retab!
 	endif
 endfunction
+
+:DetectIndent
+call FixIndent()
+autocmd BufWritePre *.py call UnfixIndent()

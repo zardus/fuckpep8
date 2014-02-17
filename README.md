@@ -10,9 +10,6 @@ Special thanks to Luca Invernizzi for the initial prototype of this concept!
 
 First, install detectindent and configure some reasonable defaults.
 
-Then, add the following to your .vimrc:
-
-	autocmd BufReadPost *.py call FixIndent()
-	autocmd BufWritePre *.py call UnfixIndent()
+Then, install fuckpep8.
 
 That's it!
