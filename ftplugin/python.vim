@@ -43,6 +43,6 @@ function! UnfixIndent()
 endfunction
 
 :DetectIndent
-call FixIndent()
-autocmd BufWritePre *.py call UnfixIndent()
-autocmd BufWritePost *.py call FixIndent()
+silent! undojoin | call FixIndent()
+autocmd BufWritePre *.py silent! undojoin | call UnfixIndent()
+autocmd BufWritePost *.py silent! undojoin | call FixIndent()
