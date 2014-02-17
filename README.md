@@ -6,14 +6,29 @@ Pull requests to undo other annoying pep8 insanity are welcome :-)
 
 Special thanks to Luca Invernizzi for the initial prototype of this concept!
 
-## Usage
+## Install
 
-First, install detectindent and configure some reasonable defaults.
+### With [Vundle]
+Add these lines to your .vimrc
+```vim
+Bundle 'zardus/fuckpep8'
+Bundle 'ciaranm/detectindent'
+```
+And execute:
+```bash
+vim +BundleInstall  +qall
+```
+
+### Manually
+First, install [detectindent] and configure some reasonable defaults.
 
 Then, install fuckpep8.
 
 Then, make sure you have filetype plugins enabled in VIM:
-
-	filetype plugin on
-
+```vim
+filetype plugin on
+```
 That's it!
+
+[Vundle]:http://github.com/gmarik/vundle
+[detectindent]:http://github.com/ciaranm/detectindent
