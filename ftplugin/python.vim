@@ -45,3 +45,4 @@ endfunction
 :DetectIndent
 call FixIndent()
 autocmd BufWritePre *.py call UnfixIndent()
+autocmd BufWritePost *.py call FixIndent()
