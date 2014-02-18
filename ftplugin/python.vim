@@ -1,5 +1,5 @@
 " Name:          fuckpep8 (global plugin)
-" Version:       1.1
+" Version:       1.2
 " Author:        Yan Shoshitaishvili <yans@yancomm.net>
 " Updates:       http://github.com/zardus/fuckpep8
 " Purpose:       Make life feasible in the presense of crazy space-hippies.
