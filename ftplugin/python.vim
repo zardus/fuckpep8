@@ -115,7 +115,7 @@ function! LoadTabUndos(filename)
 	if filereadable(a:filename)
 		let b:tabundos = StrToDict(readfile(a:filename)[0])
 
-		if b:tabundos["max"] > undotree()["seq_last"]
+		if !has_key(b:tabundos, "max") || b:tabundos["max"] > undotree()["seq_last"]
 			" our undo file probably got invalidated from under us
 			"echom "Clearing tabundos"
 			let b:tabundos = { }
