@@ -68,7 +68,7 @@ function! FixIndent()
 	let &l:tabstop = &l:shiftwidth
 
 	if &l:expandtab
-		"echom "Fixing indent"
+		" echom "Fixing indent"
 
 		let b:tabified = 1
 		let b:oldtabstop = &l:tabstop
@@ -125,14 +125,18 @@ function! LoadTabUndos(filename)
 	endif
 endfunction
 
-let b:tabundofile = undofile(bufname("%")) . "-fuckpep8"
-call LoadTabUndos(b:tabundofile)
+function! FuckIt()
+	let b:tabundofile = undofile(bufname("%")) . "-fuckpep8"
+	call LoadTabUndos(b:tabundofile)
+	
+	:DetectIndent
+	call FixIndent()
+	autocmd BufWritePre *.py call UnfixIndent()
+	autocmd BufWritePost *.py call FixIndent()
+	autocmd BufWritePost *.py call SaveTabUndos(b:tabundofile)
+	
+	map u :call RetabSmartUndo()<CR>
+	map <c-r> :call RetabSmartRedo()<CR>
+endfunction
 
-:DetectIndent
-call FixIndent()
-autocmd BufWritePre *.py call UnfixIndent()
-autocmd BufWritePost *.py call FixIndent()
-autocmd BufWritePost *.py call SaveTabUndos(b:tabundofile)
-
-map u :call RetabSmartUndo()<CR>
-map <c-r> :call RetabSmartRedo()<CR>
+call FuckIt()
