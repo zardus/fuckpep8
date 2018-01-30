@@ -79,7 +79,7 @@ function! FixIndent()
 		setlocal tabstop=4
 		setlocal softtabstop=4
 		setlocal shiftwidth=4
-	else
+	elseif !exists('b:tabified')
 		let b:tabified = 0
 	endif
 endfunction
