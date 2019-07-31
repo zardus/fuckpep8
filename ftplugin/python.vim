@@ -131,9 +131,9 @@ function! FuckIt()
 	
 	:DetectIndent
 	call FixIndent()
-	autocmd BufWritePre *.py call UnfixIndent()
-	autocmd BufWritePost *.py call FixIndent()
-	autocmd BufWritePost *.py call SaveTabUndos(b:tabundofile)
+	autocmd BufWritePre * if &filetype == "python" | call UnfixIndent()
+	autocmd BufWritePost * if &filetype == "python" | call FixIndent()
+	autocmd BufWritePost * if &filetype == "python" | call SaveTabUndos(b:tabundofile)
 	
 	map u :call RetabSmartUndo()<CR>
 	map <c-r> :call RetabSmartRedo()<CR>
